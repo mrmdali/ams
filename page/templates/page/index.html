@@ -1,0 +1,620 @@
+{% load static %}
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>AMS | Advanced Micro Service</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" sizes="512x512" href="{% static 'ams/1.png' %}" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/A.bootstrap.min.css%2bowl.carousel.min.css%2bslicknav.css%2banimate.min.css%2bmagnific-popup.css%2bfontawesome-all.min.css%2bthemify-icons.css%2bslick.css%2bnice-select.css' %}"
+    />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+  </head>
+
+  <body>
+    <header>
+      <div class="header-area header-transparent">
+        <div class="main-header header-sticky">
+          <div class="container-fluid">
+            <div
+              class="
+                d-flex
+                align-items-center
+                justify-content-between
+                flex-wrap
+                position-relative
+              "
+            >
+              <div class="left-side d-flex align-items-center">
+                <div class="logo">
+                  <a href="#"><img src="{% static 'ams/2.png' %}" alt="" /></a>
+                </div>
+
+                <div class="main-menu d-none d-lg-block">
+                  <nav>
+                    <ul id="navigation">
+                      <li><a href="#banner">Bosh sahifa</a></li>
+                      <li><a href="#services">Servislar</a></li>
+                      <li><a href="#about">Biz haqimizda</a></li>
+                      <li><a href="#advantages">Afzalliklar</a></li>
+                      <li><a href="#why-us">Nega biz</a></li>
+                      <li><a href="#why-us">Aloqa</a></li>
+                      <li id="nav-number" ><a href="tel:33 801 40 01" class="header-btn2"
+                        > <span>33 801 40 01</span></a
+                      ></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="header-right-btn f-right">
+                <a href="tel:33 801 40 01" class="header-btn2"
+                  >Bog'lanish: <span>33 801 40 01</span></a
+                >
+                <!-- <a href="#contact" class="btn_0">Contact us</a> -->
+              </div>
+
+              <div class="col-12">
+                <div class="mobile_menu d-block d-lg-none"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="area position-relative" id="banner">
+        <div
+          class="
+            single-sliders
+            slider-height slider-bg1
+            d-flex
+            align-items-center
+          "
+        >
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-xxl-4 col-xl-5 col-lg-8 col-md-8">
+                <div class="hero-caption">
+                  <span>Advanced Micro Service</span>
+                  <h1>Sizning dasturiy hamkoringiz</h1>
+                  <p>
+                    Biz butun Internet bo'ylab mijozlarga va istiqbollarga
+                    erishishga yordam beradigan samarali strategiyalarni ishlab
+                    chiqamiz.
+                  </p>
+                  <a href="#contact" class="btn_0 hero-btn">So'rov yuborish</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section
+        class="categories-area bottom-padding position-relative"
+        id="services"
+      >
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+              <div class="section-tittle text-center mb-60">
+                <span>Bizning Xizmatlar</span>
+                <h2>
+                  Bizning takliflarimiz bilan biznesingizni yanada
+                  rivojlantiring
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div class="row services">
+            {% for item in services %}
+            <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
+              <div class="single-cat mb-50">
+                <h5><span class="card-title">{{ item.title }}</span></h5>
+                <div class="cat-icon">
+                  <img src="{{ item.image.url }}" alt="" />
+                </div>
+                <div class="cat-cap">
+                  <p>{{ item.description }}</p>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        <div class="shape-s1 d-none d-xxl-block">
+          <img src="{% static 'assets/img/gallery/shape-1.png' %}" alt="" />
+        </div>
+        <div class="shape-s2 d-none d-xl-block">
+          <img src="{% static 'assets/img/gallery/shape-2.png' %}" alt="" />
+        </div>
+      </section>
+
+      <section class="about-area1 about-area2" id="about">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-xxl-5 col-xl-6 col-lg-6 col-md-8">
+              <div class="about-img about-img1">
+                <img src="{% static 'ams/secondary.png' %}" alt="" width="100%"/>
+              </div>
+            </div>
+            <div class="offset-xxl-1 col-xxl-5 col-xl-6 col-lg-6 col-md-9">
+              <div class="about-caption about-caption1">
+                <div class="section-tittle mb-25">
+                  <span>Biz haqimizda</span>
+                  <h2>
+                    Biz muvaffaqiyatli raqamli mahsulotni yaratish bosqichlarini
+                    yaratamiz
+                  </h2>
+                  <p>
+                    Ish jarayonlarini avtomatlashtirish va tartibga solishda
+                    sizga yordam berish uchun biz veb -ilovangiz va dasturiy
+                    infratuzilmangiz bilan uzluksiz integratsiyalashuviga
+                    erishamiz.
+                  </p>
+                  <p class="mb-40 pt-10">
+                    Biznesingizni raqamlashtirish orqali ish jarayonlari to'liq
+                    nazorat ostiga olinadi va samaradorlik sezilarli darajada
+                    oshadi
+                  </p>
+                </div>
+                <span class="browse-btn">Advanced Micro Service</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="categories-area pricing-card-area section-padding fix"
+        id="advantages"
+      >
+        <div class="container p-bg pt-70">
+          <div class="row justify-content-center">
+            <div class="col-xl-8 col-lg-7 col-md-10">
+              <div class="section-tittle text-center mb-15">
+                <span>Afzalliklar</span>
+                <h2>Bizning xizmatlardan foydalanish uchun sabablar​​</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container p-bg">
+          <div class="tab-content" id="nav-tabContent">
+            <div
+              class="tab-pane fade show active"
+              id="nav-one"
+              role="tabpanel"
+              aria-labelledby="nav-one-tab"
+            >
+              <div class="row services">
+                {% for item in advantages %}
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 text-center">
+                  <div class="single-cat mb-50">
+                    <h5><span class="card-title">{{ item.title }}</span></h5>
+                    <div class="cat-icon">
+                      <img src="{{ item.image.url }}" alt="" />
+                    </div>
+                    <div class="cat-cap">
+                      <p>{{ item.description }}</p>
+                    </div>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-low-area" id="why-us">
+        <div class="container">
+          <div
+            class="
+              row
+              justify-content-between
+              align-items-center
+              mb-20
+              pb-25
+              border-bottom
+            "
+          >
+            <div class="col-xxl-5 col-xl-7 col-lg-6 col-md-8">
+              <div class="section-tittle section-tittle3">
+                <span>Nega bizni tanlaysiz</span>
+                <h2>Biz rivojlanishga ixtisoslashgan yangi IT kompaniyamiz</h2>
+              </div>
+            </div>
+            <div class="col-xxl-7 col-xl-5 col-lg-6 col-md-4">
+              <span class="browse-btn f-right">Advanced Micro Service</span>
+            </div>
+          </div>
+          <div
+            class="row justify-content-between align-items-center form-content mb-20"
+            data-background="{% static 'ams/111.jpg' %}"
+            style="
+              background-position: center;
+              background-size: cover;
+            "
+          >
+            <div class="col-xl-5 col-lg-7 col-md-10">
+              <div class="about-caption ones">
+                <div class="row mt-40">
+                  {% for item in counters %}
+                  <div class="col-xl-5 col-lg-5 col-md-6 col-sm-5">
+                    <div class="single mb-30">
+                      <div class="single-counter">
+                        <span class="counter">{{ item.count }}</span>
+                        <p class="">+</p>
+                      </div>
+                      <div class="pera-count">
+                        <p>{{ item.title }}</p>
+                      </div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                  <div class="col-12">
+                    <div class="about-right-cap">
+                      <p>
+                        Raqamli texnologiyalarning keng miqyosida qollash orqali
+                        malumot xavsizligi yaxshilanishi, daromad oqimi
+                        oshishi,mijozlar ortishi kabi ko'plab avzalliklarga
+                        erishishingiz mumkin. Ulardan o'zingizning foydangiz
+                        uchun foydalaning va biznesingizni yanada ravonroq
+                        yo'lga qo'ying.Texnologiya bizning hayotimmizni
+                        osonlashtirishga va ishni tez va sifatli bajarishga
+                        imkon beradi
+                      </p>
+                      <!-- <p>
+                        - James Surowiecki
+                      </p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7 col-lg-5 col-md-10 form-card">
+              <div class="emargency-care section-img-bg2" id="contact">
+                <div class="-emargency">
+                  <form action="#" style="width: 100%" method="POST">
+                    {% csrf_token %}
+                    <div class="mt-10">{{ contact.full_name }}</div>
+                    <div class="mt-10">{{ contact.phone }}</div>
+                    <div class="input-group-icon mt-10">
+                      <div class="icon">
+                        <i class="fa fa-plane" aria-hidden="true"></i>
+                      </div>
+                      <div class="form-select p-0" id="default-select">
+                        {{ contact.type_of_service }}
+                      </div>
+                    </div>
+                    <div class="mt-10">{{ contact.content }}</div>
+
+                    <button type="submit" class="border-btn loan-btn mt-30">
+                      Jo'natish
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <div class="brand-area">
+        <div class="container">
+            <div class="row justify-content-center align-items-end">
+                <div class="col-xl-12">
+                    <div class="brand-active  pt-50 pb-40">
+                        <div class="single-brand">
+                            <img src="assets/img/gallery/brand1.png" alt="">
+                        </div>
+                        <div class="single-brand">
+                            <img src="assets/img/gallery/brand2.png" alt="">
+                        </div>
+                        <div class="single-brand">
+                            <img src="assets/img/gallery/brand3.png" alt="">
+                        </div>
+                        <div class="single-brand">
+                            <img src="assets/img/gallery/brand4.png" alt="">
+                        </div>
+                        <div class="single-brand">
+                            <img src="assets/img/gallery/brand2.png" alt="">
+                        </div>
+                        <div class="single-brand">
+                            <img src="assets/img/gallery/brand3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+      <!-- <div class="emargency-care section-img-bg2" data-background="assets/img/hero/4.png" id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-7 col-md-9 col-sm-12">
+                    <div class="single-emargency text-center">
+                        <form action="#" style="width: 100%;">
+                            <div class="mt-10 ">
+                                <input type="text " name="Full Name " placeholder="Full Name " onfocus="this.placeholder='' " onblur="this.placeholder='Full Name' " required class="single-input-primary ">
+                            </div>
+                            <div class="mt-10 ">
+                                <input type="text " name="Phone Number " placeholder="Phone Number " onfocus="this.placeholder='' " onblur="this.placeholder='Phone Number' " required class="single-input-primary ">
+                            </div>
+                            <div class="input-group-icon mt-10">
+                                <div class="icon"><i class="fa fa-plane" aria-hidden="true"></i></div>
+                                <div class="form-select p-0" id="default-select">
+                                    <select>
+                                        <option value="1">Web sayt</option>
+                                        <option value="2">Videonablyudeniya</option>
+                                        <option value="3">Telefoniya</option>
+                                        <option value="4">local set</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-10 ">
+                                <textarea class="single-textarea " placeholder="Message " onfocus="this.placeholder='' " onblur="this.placeholder='Message' " required></textarea>
+                            </div>
+
+                            <button type="submit" class="border-btn loan-btn mt-30">Contact Us</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    </main>
+
+    <footer>
+      <div
+        class="footer-wrapper section-img-bg2"
+        data-background="{% static 'assets/img/gallery/footer-bg.jpg' %} "
+      >
+        <div class="footer-area footer-padding">
+          <div class="container">
+            <div class="row justify-content-between footer-items">
+              <div class="col-xl-3 col-lg-3 col-md-6 col-sm-8 text-center">
+                <div class="single-footer-caption">
+                  <div class="single-footer-caption mb-30">
+                    <div class="footer-logo mb-35">
+                      <a href="# "
+                        ><img src="{% static 'ams/2.png' %} " alt=" "
+                      /></a>
+                    </div>
+                    <div class="footer-tittle">
+                      <div class="footer-pera">
+                        <p>
+                          Barcha turdagi IT service lariga ixtisoslangan
+                          innovatsion usulda tashkil etilgan raqamli texnologik
+                          kompaniya.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 text-center">
+                <div class="single-footer-caption">
+                  <div class="footer-tittle">
+                    <h4>Menu</h4>
+                    <ul>
+                      <li><a href="#banner ">Bosh sahifa</a></li>
+                      <li><a href="#services">Xizmatlar</a></li>
+                      <li><a href="#about">Biz haqimizda</a></li>
+                      <li><a href="#advantages">Afzalliklar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="single-footer-caption text-center">
+                  <div class="footer-tittle">
+                    <div class="cat-icon">
+                      <a href="#">
+                        <img
+                          src="{% static 'assets/img/icon/call.svg' %}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Phone: <br />
+                      <a href="#">33 801 40 01</a>
+                    </p>
+                    <p>
+                      <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="single-footer-caption text-center">
+                  <div class="footer-tittle">
+                    <div class="cat-icon">
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/amspage_uz/"
+                      >
+                        <img
+                          src="{% static 'assets/img/icon/instagram.svg' %}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Instagram: <br />
+                      <a
+                        target="_blank"
+                        href="https://www.instagram.com/amspage_uz/"
+                        >amspage_uz</a
+                      >
+                    </p>
+                    <p>
+                      <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6">
+                <div class="single-footer-caption text-center">
+                  <div class="footer-tittle">
+                    <div class="cat-icon">
+                      <a target="_blank" href="https://t.me/amspage_uz">
+                        <img
+                          src="{% static 'assets/img/icon/telegram.svg' %}"
+                          alt=""
+                        />
+                      </a>
+                    </div>
+                    <p>
+                      Telegram: <br />
+                      <a href="https://t.me/amspage_uz">amspage_uz</a>
+                    </p>
+                    <p>
+                      <!-- Lorem ipsum dolor sit amet consectetur, adipisicing elit. -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr style="border-color: #5e5e5e" />
+
+            <div class="footer-bottom-area">
+              <div class="container">
+                <div class="footer-border">
+                  <div class="row">
+                    <div class="col-xl-12">
+                      <div class="footer-copy-right text-center">
+                        <p>
+                          <!-- Copyright &copy; -->
+                          <!-- 2021 - -->
+                          <script
+                            data-cfasync="false "
+                            src="{% static '../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js' %}"
+                          ></script>
+                          OOO Advanced Micro Service
+                          <script>
+                            document.write(new Date().getFullYear());
+                          </script>
+                          &copy; | Barcha huquqlar himoyalangan
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div id="back-top ">
+      <a class="wrapper" title="Go to Top " href="# ">
+        <div class="arrows-container">
+          <div class="arrow arrow-one"></div>
+          <div class="arrow arrow-two"></div>
+        </div>
+      </a>
+    </div>
+
+    <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/mask.js' %}"></script>
+    <script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js%2bbootstrap.min.js.pagespeed.jc.wPzHVxF1gT.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_nL$eEvxf6x);
+    </script>
+    <script>
+      eval(mod_pagespeed_Xb3KQGrOL5);
+    </script>
+
+    <script src="{% static 'assets/js/owl.carousel.min.js%2bslick.min.js.pagespeed.jc.W8l7Q1utIe.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_ulsZu5KPfp);
+    </script>
+    <script>
+      eval(mod_pagespeed_o8BgylakRf);
+    </script>
+    <script src="{% static 'assets/js/jquery.slicknav.min.js%2bwow.min.js%2bjquery.magnific-popup.js%2bjquery.nice-select.min.js%2bjquery.counterup.min.js%2bwaypoints.min.js%2bcontact.js.pagespeed.jc.x6WUMls' %}"></script>
+    <script>
+      eval(mod_pagespeed_eVQlHZELb9);
+    </script>
+
+    <script>
+      eval(mod_pagespeed_OLcgHgbQe9);
+    </script>
+    <script>
+      eval(mod_pagespeed_ra_vb0bjeb);
+    </script>
+    <script>
+      eval(mod_pagespeed_Z$TCDAz4Xv);
+    </script>
+    <script>
+      eval(mod_pagespeed_uFqJJO1ATF);
+    </script>
+    <script>
+      eval(mod_pagespeed_OFT6jSTpA7);
+    </script>
+
+    <script>
+      eval(mod_pagespeed_qGHMYOguK7);
+    </script>
+    <script src="{% static 'assets/js/jquery.form.js%2bjquery.validate.min.js%2bmail-script.js%2bjquery.ajaxchimp.min.js%2bplugins.js%2bmain.js.pagespeed.jc.5LlDlL_lCI.js' %}"></script>
+
+    <script src="{% static 'assets/js/jquery.maskedinput.min.js' %}"></script>
+    <script>
+      $(document).ready(function () {
+        $("#id_phone").mask("(99) 999-99-99");
+      });
+    </script>
+
+    <script>
+      eval(mod_pagespeed_CdJjt_tcCu);
+    </script>
+    <script>
+      eval(mod_pagespeed_DiE1nxsYVT);
+    </script>
+    <script>
+      eval(mod_pagespeed_y7FCY2jom5);
+    </script>
+    <script>
+      eval(mod_pagespeed_M5SXlPyPj1);
+    </script>
+
+    <script>
+      eval(mod_pagespeed_81_NHdXLKi);
+    </script>
+    <script>
+      eval(mod_pagespeed_fJLaj2Ygx3);
+    </script>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13 "
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "UA-23581568-13");
+    </script>
+    <script
+      defer
+      src="{% static '../../../static.cloudflareinsights.com/beacon.min.js' %}"
+      data-cf-beacon='{"rayId ":"668fe09808b07b33 ","token ":"cd0b4b3a733644fc843ef0b185f98241 ","version ":"2021.6.0 ","si ":10}'
+    ></script>
+  </body>
+</html>
